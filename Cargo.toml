@@ -1,0 +1,24 @@
+[package]
+name = "rankmap"
+version = "0.1.0"
+edition = "2021"
+
+license = "Unlicense"
+description = "rust hash table supporting key ranking"
+readme = "README.md"
+
+homepage = "https://github.com/dapper91/rankmap"
+documentation = "https://docs.rs/rankmap/"
+repository = "https://github.com/dapper91/rankmap"
+
+categories = ["algorithms", "data-structures"]
+keywords = ["hashmap", "heap", "queue", "ranked", "priority"]
+
+[dependencies]
+indexmap = "2.0.0"
+
+[[example]]
+name = "scheduler"
+
+[dev-dependencies]
+rstest = "0.18.2"
