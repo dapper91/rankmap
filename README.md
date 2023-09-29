@@ -19,15 +19,14 @@ Ranked hash table.
 A [hash-table](https://en.wikipedia.org/wiki/Hash_table) / [binary-heap](https://en.wikipedia.org/wiki/Binary_heap) 
 combined data structure that supports the following operations:
 
-# Time complexity
-| [Description]                | [Operation]  | [Complexity] |
-|------------------------------|--------------|--------------|
-| get value by key             | get          | *O*(1)~      |
-| check key existence          | contains_key | *O*(1)~      |
-| pop element with lowest rank | pop          | *O*(log(N))  |
-| get element with lowest rank | top          | *O*(1)       |
-| insert element with rank     | insert       | *O*(log(N))  |
-| remove element               | remove       | *O*(log(N))  |
+| [Description]                        | [Operation]  | [Complexity] |
+|--------------------------------------|--------------|--------------|
+| get a value by a key                 | get          | *O*(1)~      |
+| check a key existence                | contains_key | *O*(1)~      |
+| pop the element with the lowest rank | pop          | *O*(log(N))  |
+| get the element with the lowest rank | top          | *O*(1)       |
+| insert an element with a rank        | insert       | *O*(log(N))  |
+| remove an element by a key           | remove       | *O*(log(N))  |
 
 ```rust
 use std::thread;
@@ -80,4 +79,4 @@ fn main() {
 }
 ```
 
-See [documentation](https://docs.rs/rankmap) for more details.
+See the [documentation](https://docs.rs/rankmap) for more details.
