@@ -326,6 +326,9 @@ where
         let map = &mut self.map;
         let end_idx = self.heap.len();
         if heap_idx < self.heap.len() {
+            binary_heap::sift_down(&mut self.heap, heap_idx, |heap_idx, (_, map_idx_ref)| {
+                map.index_mut(*map_idx_ref).1 = heap_idx;
+            });
             binary_heap::sift_up(&mut self.heap, heap_idx, end_idx, |heap_idx, (_, map_idx_ref)| {
                 map.index_mut(*map_idx_ref).1 = heap_idx;
             });
